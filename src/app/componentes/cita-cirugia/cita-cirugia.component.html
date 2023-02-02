@@ -1,0 +1,68 @@
+
+<app-nav></app-nav>
+<p>cita-cirugia works!</p>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 col-sm-5" >
+            <div class="container">
+                <div class="card border-info mb-3" style="max-width: 18rem;">
+                    <img  class="card-img-top" [src]="citacirugia.imagen" alt="">
+                    <div class="card-header">{{citacirugia.nombre}}</div>
+                    <div class="card-body">
+                      <h5 class="card-title "  >Precio: ${{citacirugia.precio}}</h5>
+                      <p class="card-text">{{citacirugia.descripcion}}</p>
+                    </div>
+                  </div>
+            </div>
+        </div>
+        <div class="col-12 col-sm-7" >
+            <div class="container" >
+                <div class="card border-info mb-3" style="max-width: 18rem;" >
+                    <div class="card-header">Agenda Cita</div>
+                    <div class="card-body">
+                        <form action="">
+                            <div class="mb-3">
+                                <label for="formGroupExampleInput" class="form-label">Nombre completo</label>
+                                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Escribe su Nombre">
+                              </div>
+                              <div class="mb-3">
+                                <label for="formGroupExampleInput" class="form-label">Telefono</label>
+                                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Escribe su Nombre">
+                              </div>
+                              <select class="form-select" aria-label="Default select example">
+                                <option selected>Mascota</option>
+                                <option value="1">Perro</option>
+                                <option value="2">Gato</option>
+                                <option value="3">Conejo</option>
+                              </select>
+                             
+                              <div class="mb-3">
+                                <label for="formGroupExampleInput" class="form-label">cantidad mascota</label>
+                                <input type="number"  [(ngModel)]="cantidad" name="cantidad" class="form-control" (click)="calcula()" id=" cantidad formGroupExampleInput"  placeholder="introduce la Candidad">
+                              </div>
+                              
+                              <div class="mb-3">
+                                <label for="formGroupExampleInput" class="form-label">Total Pagar: $ {{rta}}</label>
+                               
+                              </div>
+                              <div class="mb-3">
+                                <label for="formGroupExampleInput" class="form-label">Nombre de la mascota</label>
+                                <input type="text"  class="form-control" id="formGroupExampleInput" placeholder="Escribe el nombre">
+                              </div>
+                              
+                              
+                              <div class="mb-3">
+                                <label for="formGroupExampleInput" class="form-label">Fecha de la cita</label>
+                                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Escribe el nombre">
+                              </div>
+                              <button type="button" class="btn btn-outline-primary"  > clacula</button>
+                            
+                        </form>
+                        
+                    </div>
+                  </div>
+            </div>
+        </div>
+        </div>
+        
+  </div>

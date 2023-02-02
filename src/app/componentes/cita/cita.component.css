@@ -1,0 +1,15 @@
+.tiene-cita{
+    background: rgb(218, 214, 214);
+}
+.agenda-cit{
+    background: rgb(206, 86, 86);
+    
+    width: 60%;
+}
+.image-cit{
+    float: right;
+    background: rgb(15, 7, 7);
+   
+    width: 30%;
+}
+

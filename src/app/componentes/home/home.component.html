@@ -1,0 +1,190 @@
+
+
+<app-nav></app-nav>
+<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="assets/imagenes/1m.png" class="d-block w-100" height="200px" width="90%">
+      </div>
+      <div class="carousel-item">
+        <img src="assets/imagenes/2m.jpg" class="d-block w-100" height="200px" width="90%">
+      </div>
+      <div class="carousel-item">
+        <img src="assets/imagenes/3m.jpg" class="d-block w-100" height="200px" width="90%">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+<section class="contenedor">
+  <div class="seccion1">
+    <div class="container">
+      <h2>El más alto estándar en el cuidado de tu mascota</h2>
+  
+    </div>
+  </div>
+  
+  <div class="IMFORMACION">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-4 col-lg-4">
+          <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+            <div class="card-header">Matriz</div>
+            <div class="card-body">
+              <h5 class="card-title">Direccion</h5>
+                <span> Río La Silla 245</span>
+                <br>
+                <span> Col. del Valle</span>
+                <br>
+                <span> San Pedro Garza García</span>
+            </div>
+          </div>
+        </div>
+        <div class=" col-sm-12 col-md-4 col-lg-4">
+          <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+            <div class="card-header">Petco Vasconcelos</div>
+            <div class="card-body">
+              <h5 class="card-title">Direccion</h5>
+              <span>  Av. Vasconcelos 160</span>
+              <br>
+              <span>Col. Jardines del Campestre</span>
+              <br>
+              <span> San Pedro Garza García, NL</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-4 col-lg-4">
+          <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+            <div class="card-header">sucursal</div>
+            <div class="card-body">
+             <img class="d-block w-100" src="assets/imagenes/veterinarias.jpg" alt="">
+            
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="info-servicios">
+      <div class="container">
+        <h2> Nuestros servicios</h2>
+      </div>
+      <div class=" contiene">
+        <nav>
+         <!--- <div class="menu_d">menu</div>--->
+          <input type="checkbox" id="check">
+          <label for="check" class="checkbtn">Menu</label>
+          <ul class="menu">
+            <li><a  (click)="cardiologia_muestra=true ;cirugia_muestra=false;rayosx_muestra=false;medicinas_p_muestra=false ">Cardiologia</a> </li>
+            <li><a (click)="cirugia_muestra=true;cardiologia_muestra=false;rayosx_muestra=false;medicinas_p_muestra=false">cirugia</a></li>
+            <li><a (click)="rayosx_muestra=true;cardiologia_muestra=false;cirugia_muestra=false;medicinas_p_muestra=false" >rayos X</a></li>
+            <li><a (click)="medicinas_p_muestra=true;cardiologia_muestra=false;cirugia_muestra=false;rayosx_muestra=false">vacunacion</a></li>
+            
+          </ul>
+        </nav>
+          
+      </div>
+      <div *ngIf="cardiologia_muestra"  class="container info_ser"  >
+       <div *ngFor="let contiene of contiencardio; let id =index">
+        <h5>{{contiene.nombre}}</h5>
+        <p>{{contiene.descripcion}} </p>
+       <img src={{contiene.imagen}} alt="" height="100px">
+      <a  type="button" [routerLink]="[ '/citaservicio', id ]" class="btn btn-outline-primary">Realizar una Cita.</a>
+      
+       </div>
+        
+
+      </div>
+     
+      
+      <div class="container info_ser"  *ngIf="cirugia_muestra">
+        <div *ngFor="let conticiru of contienecirugia; let id=index">
+          <h5>{{conticiru.nombre}}</h5>
+          <p>{{conticiru.descripcion}} </p>
+          <img src={{conticiru.imagen}} alt="" height="100px">
+          <button type="button" [routerLink]="['/citaCirugia',id]" class="btn btn-outline-primary"> Realizar una Cita</button>
+        </div>
+       
+      </div>
+      <div class="container info_ser"  *ngIf="rayosx_muestra">
+        <div *ngFor="let contienerayos of conntienerayosx; let id=index">
+          <h5>{{contienerayos.nombre}}</h5>
+        <p>{{contienerayos.descripcion}} </p>
+        <img src={{contienerayos.imagen}} alt="" height="100px">
+      <button type="button" [routerLink]="['/rayosx',id]" class="btn btn-outline-primary">Realizar una Cita</button>
+
+        </div>
+        
+        
+      </div>
+      <div class="container info_ser"  *ngIf="medicinas_p_muestra">
+        <div *ngFor="let contienevacuna of contienevacunacion">
+          <h5>{{contienevacuna.nombre}}</h5>
+          <p>{{contienevacuna.descripcion}} </p>
+          <img src={{contienevacuna.imagen}} alt="" height="100px">
+          <button type="button" class="btn btn-outline-primary"> Realizar una Cita</button>
+        </div>
+         
+      </div>
+  
+    </div>
+     
+
+
+
+</section>
+
+
+<footer>
+  <div class="equipo ">
+    <div><h2>Nuestro Equipo de Veterinarios</h2>
+    </div>
+    <div class=" container tienecards">
+
+      <div class="row">
+        <div class="container col-sm-12 col-md-4 col-lg-4">
+          <div class="card border-info mb-3" style="max-width: 18rem;">
+            <div class="card-header">Header</div>
+            <div class="card-body">
+              <h5 class="card-title">Info card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          </div>
+          
+        </div>
+        <div class="col-sm-12 col-md-4 col-lg-4">
+          <div class="card border-info mb-3" style="max-width: 18rem;">
+            <div class="card-header">Header</div>
+            <div class="card-body">
+              <h5 class="card-title">Info card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          </div>
+          
+        </div>
+        <div class="col-sm-12 col-md-4 col-lg-4">
+          <div class="card border-info mb-3" style="max-width: 18rem;">
+            <div class="card-header">Header</div>
+            <div class="card-body">
+              <h5 class="card-title">Info card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  <div class="fote">
+    <h5>© 221 Hospital Veterinario OMH. All Rights Reserved</h5>
+
+  </div>
+</footer>

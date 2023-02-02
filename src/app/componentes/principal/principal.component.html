@@ -1,0 +1,278 @@
+<div class="bg-success p-2 text-dark bg-opacity-10 navpri">
+
+    <div class="tienelogo">
+        <h3>Veterinaria PGC</h3>
+    </div>
+    <div class="tienecntaco">
+        <small>Direcion: calle obregon</small>
+        <br>
+        <small> Telefono_ 7461111059</small>
+        
+    </div>
+   
+
+</div>
+<div class="contienenav"> 
+
+<nav>
+    <input type="checkbox" id="check">
+    <label for="check" class="despliega-menu"><i class="fas fa-bars"></i> Menu</label>
+    <ul class="menu-item bg-primary">
+       
+        <li><a (click)="muestracitas=true;ventapro=false"><i class="far fa-calendar-check"></i> Citas aasd</a></li>
+        <li><a  (click)="ventapro=true;muestracitas=false" > <i class="fas fa-capsules"></i>Procutos</a></li>
+        <li><a >sdf</a></li>
+        <li><a   href="#">aweawe</a></li>
+    </ul>
+
+</nav>
+</div>
+<section class="citas ">
+<div class="container" *ngIf="muestracitas">
+    <div class="oculta">
+        <a (click)="muestracitas=false"><i class="fas fa-times-circle"></i>Cerrar</a>
+
+    </div>
+    <div class="tiene-buscar"> 
+        <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-primary" type="submit">Buscar </button>
+          </form>
+    </div>
+    
+    
+    <table class="table table-hover">
+        <thead class="table-secundary">
+            <tr class="colorta ">
+      
+                <th>nombre</th>
+            
+                <th>Telefono</th>
+            
+                <th>Mascota</th>
+                <th>cantidad Mascota</th>
+                <th>Cantidad Pagar</th>
+                <th>Nombre Mascota</th> 
+                <th>Fecha Cita</th>
+            </tr>
+        </thead>
+        <tbody class="table-info">
+         
+            <tr>
+        
+                <td class="">Soleado</td>
+            
+                <td class="">56465123</td>
+            
+                <td class="">perro</td>
+                <td class="">5</td>
+                <td class="">655</td>
+                <td class="">firulais</td>
+                <td class="">02/11/2020</td>
+            
+              </tr>
+            
+              <tr>
+            
+                <td class="">marcelino</td>
+            
+                <td class="">81236825</td>
+            
+                <td class="">perro</td>
+                <td class="">8</td>
+                <td class="">6555</td>
+                <td class="">dogy</td>
+                <td class="">02/11/2020</td>
+            
+              </tr>
+            
+              <tr>
+            
+                <td class="">gorje</td>
+            
+                <td class="">81236825</td>
+            
+                <td class="">gato</td>
+                <td class="">1</td>
+                <td class="">500</td>
+                <td class="">michi</td>
+                <td class="">02/11/2020</td>
+            
+              </tr>
+            
+        </tbody>
+      </table>
+</div>
+
+</section>
+<section class="venta-productos">
+    <div class="container" *ngIf="ventapro">
+        <div class="oculta">
+            <a (click)="ventapro=false"><i class="fas fa-times-circle"></i>Cerrar</a>
+        </div>
+        <div class="recordatorio"><h4>Venta Productos </h4></div>
+        
+        <div class="row">
+            
+            <div class="col-sm-12 col-md-4 col-lg-3">
+                <div class="productos">
+                    <img  class="d-block w-100 ima" src="assets/medicinas/medi1.jpg" alt="medicinas">
+                    <span> Producto:palvo  </span>
+                    <span>caducidad:19/20/2021</span>
+                    <div class="d-grid gap-2">
+                        <a class="btn btn-outline-primary" type="button">Selecionar</a>
+                      
+                      </div>
+                </div>
+                
+                
+            </div>
+            <div class="col-sm-12 col-md-4 col-lg-3">
+                <div class="productos">
+                    <img  class="d-block w-100 ima" src="assets/medicinas/medi2.jpg" alt="medicinas">
+                    <span> Producto:infeccion  </span>
+                    <span>caducidad:19/20/2021</span>
+                    <div class="d-grid gap-2">
+                        <a class="btn btn-outline-primary" type="button">Selecionar</a>
+                       
+                      </div>
+                </div>
+                
+                
+            </div>
+            <div class="col-sm-12 col-md-4 col-lg-3">
+                <div class="productos">
+                    <img  class="d-block w-100 ima" src="assets/medicinas/medi3.jpg" alt="medicinas">
+                    <span> Producto:rabia  </span>
+                    <span>caducidad:19/20/2021</span>
+                    <div class="d-grid gap-2">
+                        <a class="btn btn-outline-primary" type="button">Selecionar</a>
+                       
+                      </div>
+                </div>
+                
+                
+            </div>
+            <div class="col-sm-12 col-md-4 col-lg-3">
+                <div class="productos">
+                    <img  class="d-block w-100 ima" src="assets/medicinas/medi4.jpg" alt="medicinas">
+                    <span> Producto: deprecion  </span>
+                    <span>caducidad:19/20/2021</span>
+                    <div class="d-grid gap-2">
+                        <a class="btn btn-outline-primary" type="button">Selecionar</a>
+                       
+                      </div>
+                </div>
+                
+                
+            </div>
+            <div class="col-sm-12 col-md-4 col-lg-3">
+                <div class="productos">
+                    <img  class="d-block w-100 ima" src="assets/medicinas/medi3.jpg" alt="medicinas">
+                    <span> Producto:rabia  </span>
+                    <span>caducidad:19/20/2021</span>
+                     
+                     <div class="d-grid gap-2">
+                        <a class="btn btn-outline-primary" type="button">Selecionar</a>
+                       
+                      </div>
+                </div>
+                
+                
+            </div>
+        
+        </div>
+
+    </div>
+
+
+</section>
+
+<section class="prod-vence">
+    <div class="container">
+        <div class="recordatorio"><h4>Productos Proximos a Vencer </h4></div>
+        <div class="row">
+            
+            <div class="col-sm-12 col-md-4 col-lg-3">
+                <div class="productos">
+                    <img  class="d-block w-100 ima" src="assets/medicinas/medi1.jpg" alt="medicinas">
+                    <span> Producto:palvo  </span>
+                    <span>caducidad:19/20/2021</span>
+                    <div class="d-grid gap-2">
+                        <a class="btn btn-primary" type="button">Baja</a>
+                       
+                      </div>
+                </div>
+                
+                
+            </div>
+            <div class="col-sm-12 col-md-4 col-lg-3">
+                <div class="productos">
+                    <img  class="d-block w-100 ima" src="assets/medicinas/medi2.jpg" alt="medicinas">
+                    <span> Producto:infeccion  </span>
+                    <span>caducidad:19/20/2021</span>
+                    <div class="d-grid gap-2">
+                        <a class="btn btn-primary" type="button">Baja</a>
+                       
+                      </div>
+                </div>
+                
+                
+            </div>
+            <div class="col-sm-12 col-md-4 col-lg-3">
+                <div class="productos">
+                    <img  class="d-block w-100 ima" src="assets/medicinas/medi3.jpg" alt="medicinas">
+                    <span> Producto:rabia  </span>
+                    <span>caducidad:19/20/2021</span>
+                    <div class="d-grid gap-2">
+                        <a class="btn btn-primary" type="button">Baja</a>
+                       
+                      </div>
+                </div>
+                
+                
+            </div>
+            <div class="col-sm-12 col-md-4 col-lg-3">
+                <div class="productos">
+                    <img  class="d-block w-100 ima" src="assets/medicinas/medi4.jpg" alt="medicinas">
+                    <span> Producto: deprecion  </span>
+                    <span>caducidad:19/20/2021</span>
+                    <div class="d-grid gap-2">
+                        <a class="btn btn-primary" type="button">Baja</a>
+                       
+                      </div>
+                </div>
+                
+                
+            </div>
+            <div class="col-sm-12 col-md-4 col-lg-3">
+                <div class="productos">
+                    <img  class="d-block w-100 ima" src="assets/medicinas/medi3.jpg" alt="medicinas">
+                    <span> Producto:rabia  </span>
+                    <span>caducidad:19/20/2021</span>
+                     
+                     <div class="d-grid gap-2">
+                        <a class="btn btn-primary" type="button">Baja</a>
+                       
+                      </div>
+                </div>
+                
+                
+            </div>
+        
+        </div>
+    </div>
+   
+
+
+</section>
+
+
+
+
+
+   
+
+
+
+<p>principal works!</p> 

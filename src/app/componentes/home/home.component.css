@@ -1,0 +1,118 @@
+
+h2{
+    text-align: center;
+}
+.IMFORMACION{
+   
+    width: 100%;
+    background: rgb(235, 232, 232); 
+    padding-top: 15px;
+}
+.info-servicios{
+    width: 100%;
+}
+
+.checkbtn{
+    width: 100%;
+    background:rgb(42, 71, 235) ;
+    padding-left: 1em;
+}
+.contiene{
+  
+  
+    margin: auto;
+    width: 80%;
+}
+.menu{
+    background: cornflowerblue;
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom:0;
+    left: -70%;
+    display: none;
+    list-style:none;
+    text-align: center;
+    list-style-type:none;
+   
+    transition: display 0.5s;
+}
+
+
+.menu li a{
+    text-decoration: none;
+    padding: 25px;
+    color: rgb(255, 255, 255);
+     display: block;
+ }
+ .menu li a:hover{
+    text-decoration: none;
+    padding: 25px;
+  transition: 1s;
+    background: rgba(0,0,0,.3);;
+     
+ }
+
+#check:checked ~ .menu{
+    display: block;
+   
+}
+
+#check{
+    
+    display: none;
+}
+ /*ajuste movil*/
+
+ @media screen and (min-width:700px) {
+     .menu{
+         display: flex;
+     }
+     .menu li{
+        flex: auto;
+       text-align: center;
+       border-right: 1px solid rgba(0,0,0,.5);
+       list-style:none;
+       
+        
+    }
+    .checkbtn{
+        display: none;
+    }
+    #check{
+        display: none;
+    }
+  
+     
+ }
+ .info_ser{
+     width: 80%;
+     background: rgb(238, 238, 238);
+  
+ }
+
+ .imfo{
+    float: left;
+    /*background: rgb(0, 255, 34);*/
+ 
+    width: 80%;
+}
+ 
+ .im{
+     float: right;
+     background: blue;
+     
+     width: 80%;
+ }
+ .fote{
+     text-align: center;
+     background: rgb(52, 119, 243);
+     width: 100%;
+ }
+ .equipo{
+   margin-top: 15px;
+     background: rgb(229, 231, 236);
+     width: 100%;
+ }
+ .tienecard{
+     width: 80%;
+ }
